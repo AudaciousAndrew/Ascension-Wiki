@@ -1,13 +1,13 @@
-const { merge } = require("webpack-merge");
-const common = require("./webpack.common");
-const paths = require("./paths");
-const TerserPlugin = require("terser-webpack-plugin");
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const { merge } = require('webpack-merge');
+const TerserPlugin = require('terser-webpack-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const common = require('./webpack.common');
+const paths = require('./paths');
 
 module.exports = merge(common, {
-  mode: "production",
+  mode: 'production',
   output: {
-    filename: "bundle.js",
+    filename: 'bundle.js',
     path: paths.appBuild,
   },
   optimization: {

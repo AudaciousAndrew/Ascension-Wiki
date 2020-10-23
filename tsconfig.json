@@ -2,18 +2,18 @@
   "compilerOptions": {
     "outDir": "./dist/",
     "target": "es5",
-    "module": "es6",
+    "module": "CommonJS",
     "jsx": "react",
-    "noImplicitAny": false,
-    "allowSyntheticDefaultImports": true,
     "moduleResolution": "node",
     "baseUrl": "./src",
-    "paths": {
-      "components/*": ["components/*"],
-      "assets/*": ["assets/*"],
-      "utils/*": ["utils/*"]
-    }
+    "allowJs": true,
+    "sourceMap": true,
+    "noEmitOnError": true,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
   },
-  "include": ["src", "scripts", "config"],
   "exclude": ["node_modules"]
 }
