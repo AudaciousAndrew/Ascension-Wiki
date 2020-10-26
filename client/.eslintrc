@@ -5,7 +5,7 @@
     "ecmaVersion": 2017,
     "sourceType": "module",
     "ecmaFeatures": {
-        "jsx": true
+      "jsx": true
     }
   },
   "settings": {
@@ -13,10 +13,7 @@
       "version": "detect"
     }
   },
-  "plugins": [
-    "react",
-    "@typescript-eslint"
-  ],
+  "plugins": ["react", "@typescript-eslint"],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
@@ -28,5 +25,6 @@
   "env": {
     "es6": true,
     "browser": true
-  }
+  },
+  "rules": {}
 }
