@@ -1,14 +1,14 @@
-const { merge } = require('webpack-merge');
-const TerserPlugin = require('terser-webpack-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const common = require('./webpack.common');
-const paths = require('./paths');
+const { merge } = require("webpack-merge");
+const TerserPlugin = require("terser-webpack-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const common = require("./webpack.common");
+const paths = require("./paths");
 
 module.exports = merge(common, {
-  mode: 'production',
+  mode: "production",
   output: {
-    filename: 'bundle.js',
-    path: paths.appBuild,
+    filename: "bundle.js",
+    path: paths.appBuild
   },
   optimization: {
     minimize: true,
@@ -18,11 +18,11 @@ module.exports = merge(common, {
         extractComments: true,
         terserOptions: {
           compress: {
-            drop_console: true,
-          },
-        },
+            drop_console: true
+          }
+        }
       }),
-      new OptimizeCSSAssetsPlugin({}),
-    ],
-  },
+      new OptimizeCSSAssetsPlugin({})
+    ]
+  }
 });

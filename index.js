@@ -1,20 +1,20 @@
-const express = require('express');
-const config = require('config');
-const mongoose = require('mongoose');
+const express = require("express");
+const config = require("config");
+const mongoose = require("mongoose");
 
 const app = express();
-const PORT = config.get('port') || 5000;
+const PORT = config.get("port") || 8082;
 
-app.use('/api/auth', require('./routes/auth.routes'));
+app.use("/api/auth", require("./routes/auth.routes"));
 
 async function start() {
   try {
     await mongoose.connect(
-      config.get('MongoUri'),
+      config.get("MongoUri"),
       {
         useUnifiedTopology: true,
         useNewUrlParser: true,
-        useCreateIndex: true,
+        useCreateIndex: true
       },
       () =>
         console.log(`[server] Successfully connected to the database cluster`)
@@ -24,7 +24,7 @@ async function start() {
       console.log(`[server] Server is up and running on port:${PORT}`)
     );
   } catch (e) {
-    console.log('[server] Something went wrong', e.message);
+    console.log("[server] Something went wrong", e.message);
     process.exit(-1);
   }
 }

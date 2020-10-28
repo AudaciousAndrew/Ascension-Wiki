@@ -2,7 +2,7 @@
   "compilerOptions": {
     "outDir": "./dist/",
     "target": "es5",
-    "module": "CommonJS",
+    "module": "commonjs",
     "jsx": "react",
     "moduleResolution": "node",
     "baseUrl": "./src",
@@ -13,7 +13,15 @@
     "removeComments": true,
     "experimentalDecorators": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "components/*": ["components/*"],
+      "utils/*": ["utils/*"],
+      "stores/*": ["stores/*"],
+      "types/*": ["types/*"],
+      "routes/*": ["routes/*"],
+      "assets/*": ["assets/*"]
+    }
   },
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "build"]
 }

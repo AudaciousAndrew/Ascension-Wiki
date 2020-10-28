@@ -1,4 +1,4 @@
 {
-    "port": 8080,
-    "MongoUri": "mongodb+srv://ascensionWiki:489052369@ascension-wiki.bzu8j.mongodb.net/Ascension-Wiki?retryWrites=true&w=majority"
+  "port": 8081,
+  "MongoUri": "mongodb+srv://ascensionWiki:489052369@ascension-wiki.bzu8j.mongodb.net/Ascension-Wiki?retryWrites=true&w=majority"
 }

@@ -10,7 +10,16 @@
   },
   "settings": {
     "react": {
+      "pragma": "React",
       "version": "detect"
+    },
+    "import/resolver": {
+      "webpack": {
+        "config": "config/webpack.dev.js"
+      },
+      "node": {
+        "extensions": [".ts", ".tsx", ".js"]
+      }
     }
   },
   "plugins": ["react", "@typescript-eslint"],
@@ -26,5 +35,13 @@
     "es6": true,
     "browser": true
   },
-  "rules": {}
+  "rules": {
+    "no-console": "off",
+    "import/prefer-default-export": "off",
+    "@typescript-eslint/comma-dangle": "off",
+    "@typescript-eslint/quotes": ["error", "double"],
+    "@typescript-eslint/no-empty-interface": "off",
+    "react/prefer-stateless-function": "off"
+  },
+  "ignorePatterns": ["/config"]
 }
