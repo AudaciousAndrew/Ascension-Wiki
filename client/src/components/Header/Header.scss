@@ -1,0 +1,57 @@
+@import "../../styles/variables.scss";
+@import "../../styles/typography.scss";
+
+.header {
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 8px 72px;
+  font-family: $Montseratt;
+  font-size: $font-size-18;
+  font-weight: $font-weight-bold;
+  position: absolute;
+  width: 100%;
+  background-color: rgba($color: $clr-black-1, $alpha: 0.6);
+
+  .logo {
+    display: flex;
+    align-items: center;
+
+    .icon {
+      width: auto;
+      height: 60px;
+    }
+
+    .title {
+      display: block;
+      margin-left: 12px;
+      color: white;
+    }
+  }
+
+  .navbar {
+    .list {
+      list-style: none;
+      display: flex;
+
+      .listItem:not(:last-child) {
+        margin-right: 32px;
+      }
+
+      .listItem a {
+        color: white;
+      }
+
+      .link {
+        color: black;
+      }
+    }
+  }
+}
+
+.test {
+  width: 100%;
+}

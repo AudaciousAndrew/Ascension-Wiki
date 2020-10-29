@@ -24,6 +24,10 @@ module.exports = {
         loader: "source-map-loader"
       },
       {
+        test: /\.(png|svg)$/i,
+        loader: "file-loader"
+      },
+      {
         test: /\.(sa|sc|c)ss$/i,
         exclude: /node_modules/,
         use: [

@@ -1,6 +1,7 @@
 export const PATH = {
   ROOT: "/",
   AUTH: "/auth",
+  SIGN_IN: "auth/sign-in",
   SIGN_UP: "/auth/sign-up",
   USER: "/user/:id",
 
@@ -8,4 +9,5 @@ export const PATH = {
   ARTICLE: "/articles/:id",
 
   HOME: "/home",
+  FAQ: "/faq"
 };
