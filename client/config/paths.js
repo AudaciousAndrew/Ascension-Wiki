@@ -16,6 +16,7 @@ module.exports = {
     utils: resolvePath("src/utils"),
     types: resolvePath("src/types"),
     routes: resolvePath("src/routes"),
-    assets: resolvePath("src/assets")
+    assets: resolvePath("src/assets"),
+    styles: resolvePath("src/styles")
   }
 };

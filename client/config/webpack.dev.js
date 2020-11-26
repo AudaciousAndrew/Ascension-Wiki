@@ -7,7 +7,8 @@ module.exports = merge(common, {
   devServer: {
     contentBase: paths.appPublic,
     hot: true,
-    port: 8080
+    port: 8083,
+    historyApiFallback: true
   },
   devtool: "source-map"
 });

@@ -1,6 +1,7 @@
 const express = require("express");
 const config = require("config");
 const mongoose = require("mongoose");
+const path = require("path");
 
 const app = express();
 const PORT = config.get("port") || 8082;
@@ -28,5 +29,17 @@ async function start() {
     process.exit(-1);
   }
 }
+
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "public", "index.html"));
+});
+
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static("client/build"));
+
+//   app.get("*", (req, res) => {
+//     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+//   });
+// }
 
 start();

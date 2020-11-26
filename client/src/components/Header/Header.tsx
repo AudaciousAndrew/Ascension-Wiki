@@ -1,15 +1,26 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import classNames from "classnames";
+import {
+  Link,
+  NavLink,
+  withRouter,
+  RouteComponentProps
+} from "react-router-dom";
 import { PATH } from "routes/paths";
 import Logo from "images/logo.svg";
-import Test from "images/topBG.svg";
 import styles from "./Header.scss";
 
-export class Header extends React.Component {
+interface Props {}
+
+class Header extends React.Component<Props & RouteComponentProps> {
   render(): React.ReactNode {
+    const { location } = this.props;
+    const isRoot = location.pathname === "/";
     return (
       <>
-        <header className={styles.header}>
+        <header
+          className={classNames(styles.header, isRoot && styles.headerRoot)}
+        >
           <Link to={PATH.ROOT} className={styles.logo}>
             <img src={Logo} alt="Logo" className={styles.icon} />
             <span className={styles.title}>Ascension Wiki</span>
@@ -17,24 +28,35 @@ export class Header extends React.Component {
           <nav className={styles.navbar}>
             <ul className={styles.list}>
               <li className={styles.listItem}>
-                <Link to={PATH.HOME}>Home</Link>
+                <NavLink
+                  activeClassName={styles.activeLink}
+                  to={PATH.ROOT}
+                  exact
+                >
+                  Home
+                </NavLink>
               </li>
               <li className={styles.listItem}>
-                <Link to={PATH.FAQ}>FAQ</Link>
+                <NavLink activeClassName={styles.activeLink} to={PATH.FAQ}>
+                  FAQ
+                </NavLink>
               </li>
               <li className={styles.listItem}>
-                <Link to={PATH.ARTICLES}>Articles</Link>
+                <NavLink activeClassName={styles.activeLink} to={PATH.ARTICLES}>
+                  Articles
+                </NavLink>
               </li>
               <li className={styles.listItem}>
-                <Link to={PATH.SIGN_IN}>Sign In</Link>
+                <NavLink activeClassName={styles.activeLink} to={PATH.SIGN_IN}>
+                  Sign In
+                </NavLink>
               </li>
             </ul>
           </nav>
         </header>
-        <div>
-          <img src={Test} alt="" className={styles.test} />
-        </div>
       </>
     );
   }
 }
+
+export const HeaderHOC = withRouter(Header);

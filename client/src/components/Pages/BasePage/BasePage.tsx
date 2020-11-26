@@ -1,25 +1,21 @@
 import { Footer } from "components/Footer/Footer";
-import { Header } from "components/Header/Header";
+import { HeaderHOC as Header } from "components/Header/Header";
 import React from "react";
-import { Link } from "react-router-dom";
+import { renderRoutes, RouteConfig } from "react-router-config";
 
 interface Props {
-  test?: string;
+  route: RouteConfig;
 }
 
 export class BasePage extends React.Component<Props> {
-  constructor(props: Props) {
-    super(props);
-    this.state = {};
-  }
-
   render(): React.ReactNode {
+    const {
+      route: { routes }
+    } = this.props;
     return (
       <div>
         <Header />
-        <Link to="/home">home</Link>
-        <br />
-        <Link to="/articles">articles</Link>
+        {renderRoutes(routes)}
         <Footer />
       </div>
     );

@@ -1,4 +1,6 @@
 import React from "react";
+import Test from "images/topBG.svg";
+import styles from "./HomePage.scss";
 
 interface Props {
   test?: string;
@@ -11,6 +13,15 @@ export class HomePage extends React.Component<Props> {
   }
 
   render(): React.ReactChild {
-    return <div>Home Page</div>;
+    return (
+      <>
+        <div className={styles.home}>
+          <div>
+            <img src={Test} alt="" className={styles.test} />
+          </div>
+          <div>HomePage</div>
+        </div>
+      </>
+    );
   }
 }

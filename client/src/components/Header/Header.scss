@@ -8,13 +8,14 @@
   justify-content: space-between;
   align-items: center;
   height: 60px;
-  padding: 8px 72px;
+  padding: 0 72px;
   font-family: $Montseratt;
   font-size: $font-size-18;
   font-weight: $font-weight-bold;
   position: absolute;
   width: 100%;
-  background-color: rgba($color: $clr-black-1, $alpha: 0.6);
+  transition: background-color 0.5s;
+  background-color: $clr-black-2;
 
   .logo {
     display: flex;
@@ -33,20 +34,33 @@
   }
 
   .navbar {
+    height: 60px;
+
     .list {
       list-style: none;
       display: flex;
+      height: 100%;
 
       .listItem:not(:last-child) {
         margin-right: 32px;
       }
 
-      .listItem a {
-        color: white;
-      }
+      .listItem {
+        height: 100%;
 
-      .link {
-        color: black;
+        a {
+          transition: border-bottom 0.2s;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: $clr-white-1;
+          height: 100%;
+        }
+
+        .activeLink {
+          border-bottom: 4px solid $clr-gray-2;
+          color: $clr-gray-2;
+        }
       }
     }
   }
@@ -54,4 +68,8 @@
 
 .test {
   width: 100%;
+}
+
+.headerRoot {
+  background-color: rgba($color: $clr-black-1, $alpha: 0.6);
 }
