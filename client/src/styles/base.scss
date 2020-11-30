@@ -31,3 +31,7 @@ html {
 a {
   text-decoration: none !important;
 }
+
+a:focus {
+  outline: none;
+}

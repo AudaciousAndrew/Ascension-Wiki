@@ -1,5 +1,4 @@
 import React from "react";
-import Test from "images/topBG.svg";
 import styles from "./HomePage.scss";
 
 interface Props {
@@ -14,14 +13,16 @@ export class HomePage extends React.Component<Props> {
 
   render(): React.ReactChild {
     return (
-      <>
-        <div className={styles.home}>
-          <div>
-            <img src={Test} alt="" className={styles.test} />
-          </div>
-          <div>HomePage</div>
+      <div className={styles.home}>
+        <div className={styles.head}>
+          <h1 className={styles.title}>Knowledge Base</h1>
+          <input
+            type="text"
+            placeholder="Looking for an article? Enter article name here."
+          />
         </div>
-      </>
+        <div>HomePage</div>
+      </div>
     );
   }
 }

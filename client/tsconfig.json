@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
+    "outDir": "./build",
     "module": "commonjs",
     "target": "es5",
     "jsx": "react",
@@ -9,7 +9,7 @@
     "allowJs": true,
     "sourceMap": true,
     "noEmitOnError": true,
-    "noImplicitAny": false,
+    "noImplicitAny": true,
     "removeComments": true,
     "experimentalDecorators": true,
     "esModuleInterop": true,

@@ -36,6 +36,7 @@ module.exports = {
             : {
                 loader: MiniCssExtractPlugin.loader
               },
+          { loader: "@teamsupercell/typings-for-css-modules-loader" },
           {
             loader: "css-loader",
             options: {

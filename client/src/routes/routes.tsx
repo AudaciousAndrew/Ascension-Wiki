@@ -1,10 +1,10 @@
 import { RouteConfig } from "react-router-config";
-import { PATH } from "./paths";
 import { ArticlesPage } from "components/Pages/ArticlesPage/ArticlesPage";
 import { BasePage } from "components/Pages/BasePage/BasePage";
 import { FaqPage } from "components/Pages/FaqPage/FaqPage";
 import { HomePage } from "components/Pages/HomePage/HomePage";
 import { SignInPage } from "components/Pages/SignInPage/SignInPage";
+import { PATH } from "./paths";
 
 export const routes: RouteConfig[] = [
   {

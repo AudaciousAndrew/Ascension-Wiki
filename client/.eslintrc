@@ -8,20 +8,6 @@
       "jsx": true
     }
   },
-  "settings": {
-    "react": {
-      "pragma": "React",
-      "version": "detect"
-    },
-    "import/resolver": {
-      "webpack": {
-        "config": "config/webpack.dev.js"
-      },
-      "node": {
-        "extensions": [".ts", ".tsx", ".js"]
-      }
-    }
-  },
   "plugins": ["react", "@typescript-eslint"],
   "extends": [
     "eslint:recommended",
@@ -36,25 +22,10 @@
     "browser": true
   },
   "rules": {
-    "no-console": "off",
-    "import/order": "off",
-    "global-require": "off",
-    "consistent-return": "off",
-    "react/display-name": "off",
-    "no-underscore-dangle": "off",
-    "no-use-before-define": "off",
-    "class-methods-use-this": "off",
-    "react/prefer-stateless-function": "off",
     "import/prefer-default-export": "off",
-    "import/no-dynamic-require": "off",
-    "import/no-extraneous-dependencies": "off",
-    "@typescript-eslint/ban-ts-ignore": "off",
-    "@typescript-eslint/no-explicit-any": "off",
-    "@typescript-eslint/comma-dangle": "off",
+    "react/prefer-stateless-function": "off",
     "@typescript-eslint/quotes": ["error", "double"],
-    "@typescript-eslint/no-empty-interface": "off",
-    "@typescript-eslint/no-unsafe-assignment": "off",
-    "@typescript-eslint/no-unsafe-member-access": "off"
+    "@typescript-eslint/comma-dangle": "off"
   },
-  "ignorePatterns": ["/config"]
+  "ignorePatterns": ["/config", "*.d.ts"]
 }
